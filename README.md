@@ -1,6 +1,6 @@
 ### **NextCloud + dotnet/C# API + Angular 18 app**
 
-A demo that works on localhost and in development-mod only.
+A demo that works on localhost and in development-mode only.
 
 *   Runs NextCloud in a docker-container.
 *   Backend: dotnet/C# Web API.
@@ -14,12 +14,12 @@ Change the ports, usernames and passwords in **docker-compose.yml** to the needs
 
 ### **Backend: dotnet/C# web API**
 
-### The backend allows the following file formats:
+The backend allows the following file formats:
 
 *   _images:_ jpg, png, gif
 *   _documents:_ pdf, doc, docx, rtf, odt
 
-### To add more file formats, see the lines in **Program.cs** and extend this to the needs
+To add more file formats, see the lines in **Program.cs** and extend this to the needs
 
 `var allowedFileList = new AllowedFileFormatList()`  
 `{`  
