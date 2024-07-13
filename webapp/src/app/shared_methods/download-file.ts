@@ -21,20 +21,20 @@ export class DownloadFile {
                     link.download = result.fileName ?? 'unknown_download';
                     link.dispatchEvent(new MouseEvent('click'));
             
-                    this.toastr.success('Bestand gedownload.');
+                    this.toastr.success('File successfully downloaded.');
                   } catch {
-                    this.toastr.error('Kan bestand niet downloaden');
+                    this.toastr.error('Can\'t download file.');
                   }          
                 } else {
-                  this.toastr.error(result.errorMessage ?? 'Kan bestand niet downloaden');
+                  this.toastr.error(result.errorMessage ?? 'Can\'t download file.');
                 }
               },
               error: () => {
-                this.toastr.error('Kan bestand niet downloaden');
+                this.toastr.error('Can\'t download file.');
               }
             });
         } else {
-            this.toastr.error('Kan bestand niet downloaden. Bestand heeft geen naam.');
+            this.toastr.error('Can\'t download file. The file has no name.');
         }
     };
 
