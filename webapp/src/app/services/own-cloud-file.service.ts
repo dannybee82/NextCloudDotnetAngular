@@ -14,7 +14,7 @@ const api: string = environment.endpoint  + environment.controllerName;;
 export class OwnCloudFileService {
 
   private http = inject(HttpClient);
-
+  
   getFileList(): Observable<FileInfo[]> {
     return this.http.get<FileInfo[]>(api + 'GetFileList');
   }

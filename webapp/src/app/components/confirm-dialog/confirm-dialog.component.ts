@@ -1,11 +1,6 @@
 import { Component, InputSignal, input, OutputEmitterRef, output} from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
-	standalone: true,
-	imports: [
-		CommonModule,
-	],
   selector: 'app-confirm-dialog',
   templateUrl: './confirm-dialog.component.html',
   styleUrls: ['./confirm-dialog.component.scss']

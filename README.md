@@ -1,10 +1,10 @@
-### **NextCloud + dotnet/C# API + Angular 18 app**
+### **NextCloud + dotnet/C# API + Angular 19 app**
 
 A demo that works on localhost and in development-mode only.
 
 *   Runs NextCloud in a docker-container.
 *   Backend: dotnet/C# Web API.
-*   Frontend: Angular 18 app
+*   Frontend: Angular 19 app
 
 Change the ports, usernames and passwords in **docker-compose.yml** to the needs.
 
@@ -23,15 +23,15 @@ To add more file formats, see the lines in **Program.cs** and extend this to the
 
 `var allowedFileList = new AllowedFileFormatList()`  
 `{`  
- `AllowedFileList = new List<AllowedFileFormat>()`  
- `{`  
- `new AllowedFileFormat()`  
- `{`  
- `Extension = "jpg",`  
- `FileFormat = FileFormatLocator.GetFormats().OfType<FileSignatures.Formats.Jpeg>()`  
- `}, //(...)`
+`AllowedFileList = new List<AllowedFileFormat>()`  
+`{`  
+`new AllowedFileFormat()`  
+`{`  
+`Extension = "jpg",`  
+`FileFormat = FileFormatLocator.GetFormats().OfType<FileSignatures.Formats.Jpeg>()`  
+`}, //(...)`
 
-### **Frontend: Angular 18 app**
+### **Frontend: Angular 19 app**
 
 Command to run the Angular app:
 
@@ -45,21 +45,21 @@ To allow more file-formats in the frontend, change the code:
 
 `export class LoadFilesInBrowserService {`
 
- `private _allowedExtensions: string[] = ['jpg', 'jpeg', 'png', 'pdf', 'csv', 'gif'];`
+`private _allowedExtensions: string[] = ['jpg', 'jpeg', 'png', 'pdf', 'csv', 'gif'];`
 
- `private _allowedTypes: string[] = ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf', 'text/csv', 'image/gif'];`
+`private _allowedTypes: string[] = ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf', 'text/csv', 'image/gif'];`
 
 And change code in the templates:
 
 `<app-open-file`
 
- `[fileExtensions]="'application/pdf,image/jpg,image/jpeg,image/png,image/gif,text/csv'"`
+`[fileExtensions]="'application/pdf,image/jpg,image/jpeg,image/png,image/gif,text/csv'"`
 
- `[buttonClass]="'bi bi-file-earmark'"`
+`[buttonClass]="'bi bi-file-earmark'"`
 
- `[buttonText]="'Select File'"`
+`[buttonText]="'Select File'"`
 
- `(selectedFile)="this.loadFile($event)">`
+`(selectedFile)="this.loadFile($event)">`
 
 `</app-open-file>`
 

@@ -1,12 +1,10 @@
 import { Component, InputSignal, input, OutputEmitterRef, output, EventEmitter, Input } from '@angular/core';
 
 @Component({
-	standalone: true,
   selector: 'app-open-file',
   templateUrl: './open-file.component.html',
   styleUrls: ['./open-file.component.scss']
 })
-
 export class OpenFileComponent {
 
   buttonColor: InputSignal<string> = input<string>("btn-primary");
